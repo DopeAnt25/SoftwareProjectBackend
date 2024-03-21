@@ -10,6 +10,14 @@ func _ready():
 func _process(delta):
 	pass
 
-
-func _on_check_button_button_down():
 	$ColorRect/ClasscodeEnter.visable = false
+
+
+func _on_signup_switch_btn_pressed():
+	#make signup vissble and login invisible
+	
+	pass # Replace with function body.
+
+
+func _on_login_switch_btn_pressed():
+	pass # Replace with function body.

@@ -6,7 +6,8 @@
 script = ExtResource("1_sx1t2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 550.0
+offset_left = 16.0
+offset_right = 566.0
 offset_bottom = 615.0
 color = Color(0.54902, 0.54902, 0.54902, 1)
 
@@ -42,41 +43,108 @@ offset_right = 519.0
 offset_bottom = 359.0
 placeholder_text = "School Email"
 
+[node name="name" type="TextEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 376.0
+offset_right = 519.0
+offset_bottom = 431.0
+placeholder_text = "Name
+"
+
 [node name="StudentTeacherCheck" type="CheckButton" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.378
-anchor_top = 0.637
-anchor_right = 0.378
-anchor_bottom = 0.637
-offset_left = -39.9
-offset_top = -23.755
-offset_right = 137.1
-offset_bottom = 48.245
+anchor_left = 0.393
+anchor_top = 0.754
+anchor_right = 0.393
+anchor_bottom = 0.754
+offset_left = -56.15
+offset_top = -15.71
+offset_right = 120.85
+offset_bottom = 56.29
 text = "Student/Teacher"
 
-[node name="ClasscodeGenerator" type="RichTextLabel" parent="ColorRect"]
+[node name="LoginSwitchBTN" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 536.0
+offset_right = 512.0
+offset_bottom = 576.0
+text = "Login?"
+
+[node name="SignupLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.093
+anchor_bottom = 0.013
+offset_left = 200.0
+offset_top = 8.0
+offset_right = 313.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 36
+text = "Sign Up
+"
+
+[node name="SignupBTN" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 536.0
+offset_right = 200.0
+offset_bottom = 576.0
+text = "Sign Up"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 584.0
+offset_right = 1134.0
+offset_bottom = 615.0
+color = Color(0.54902, 0.54902, 0.54902, 1)
+
+[node name="Username" type="TextEdit" parent="ColorRect2"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 456.0
-offset_right = 256.0
-offset_bottom = 512.0
-text = "Class Code"
+offset_top = 160.0
+offset_right = 519.0
+offset_bottom = 215.0
+placeholder_text = "Username"
 
-[node name="ClasscodeEnter" type="TextEdit" parent="ColorRect"]
+[node name="Password" type="TextEdit" parent="ColorRect2"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 456.0
-offset_right = 520.0
-offset_bottom = 512.0
-placeholder_text = "Enter Class Code"
+offset_top = 256.0
+offset_right = 519.0
+offset_bottom = 311.0
+placeholder_text = "Password"
 
-[node name="GenerationBTN" type="Button" parent="ColorRect"]
+[node name="LoginBTN" type="Button" parent="ColorRect2"]
 layout_mode = 0
-offset_left = 353.0
-offset_top = 472.0
-offset_right = 473.0
+offset_left = 168.0
+offset_top = 360.0
+offset_right = 320.0
+offset_bottom = 400.0
+text = "Submit"
+
+[node name="SignupSwitchBTN" type="Button" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 464.0
+offset_right = 320.0
 offset_bottom = 504.0
-text = "Generate"
+text = "Sign Up?
+"
+
+[node name="LoginLabel" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.093
+anchor_bottom = 0.013
+offset_left = 192.0
+offset_top = 72.0
+offset_right = 260.85
+offset_bottom = 120.005
+theme_override_font_sizes/font_size = 36
+text = "LOGIN
+"
 
 [connection signal="button_down" from="ColorRect/StudentTeacherCheck" to="." method="_on_check_button_button_down"]
+[connection signal="pressed" from="ColorRect2/SignupSwitchBTN" to="." method="_on_signup_switch_btn_pressed"]
