@@ -1,7 +1,64 @@
-[gd_scene format=3 uid="uid://cq10b06s81k83"]
+[gd_scene load_steps=3 format=3 uid="uid://cq10b06s81k83"]
+
+[ext_resource type="Texture2D" uid="uid://dlviqx3f2dt3y" path="res://icon.svg" id="1_qgids"]
+
+[sub_resource type="SystemFont" id="SystemFont_fxnm1"]
 
 [node name="GameManager" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1056.0
 offset_right = 1152.0
 offset_bottom = 648.0
+color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 704.0
+offset_right = 1056.0
+offset_bottom = 648.0
+color = Color(0.486275, 0.117647, 0.756863, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 352.0
+offset_right = 704.0
+offset_bottom = 648.0
+color = Color(0.4, 1, 0.886275, 1)
+
+[node name="ColorRect1" type="ColorRect" parent="."]
+offset_right = 352.0
+offset_bottom = 648.0
+color = Color(0.603922, 0.290196, 0.376471, 1)
+
+[node name="Game1BTN" type="TextureButton" parent="."]
+offset_right = 352.0
+offset_bottom = 648.0
+texture_normal = ExtResource("1_qgids")
+stretch_mode = 3
+
+[node name="Game2BTN" type="TextureButton" parent="."]
+offset_left = 352.0
+offset_right = 704.0
+offset_bottom = 648.0
+
+[node name="Game3BTN" type="TextureButton" parent="."]
+offset_left = 704.0
+offset_right = 1056.0
+offset_bottom = 648.0
+
+[node name="ScoretextLabel" type="Label" parent="."]
+offset_left = 1064.0
+offset_right = 1164.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_fxnm1")
+theme_override_font_sizes/font_size = 24
+text = "SCORE:"
+
+[node name="ScoreNumberLabel" type="Label" parent="."]
+offset_left = 2112.0
+offset_right = 2212.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_fxnm1")
+theme_override_font_sizes/font_size = 27
+text = "SCORE:"

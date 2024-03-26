@@ -6,9 +6,10 @@
 script = ExtResource("1_sx1t2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 16.0
-offset_right = 566.0
-offset_bottom = 615.0
+offset_left = 280.0
+offset_top = 16.0
+offset_right = 830.0
+offset_bottom = 631.0
 color = Color(0.54902, 0.54902, 0.54902, 1)
 
 [node name="Username" type="TextEdit" parent="ColorRect"]
@@ -95,9 +96,10 @@ offset_bottom = 576.0
 text = "Sign Up"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 584.0
-offset_right = 1134.0
-offset_bottom = 615.0
+offset_left = 280.0
+offset_top = 16.0
+offset_right = 830.0
+offset_bottom = 631.0
 color = Color(0.54902, 0.54902, 0.54902, 1)
 
 [node name="Username" type="TextEdit" parent="ColorRect2"]
@@ -148,5 +150,6 @@ text = "LOGIN
 
 [connection signal="button_down" from="ColorRect/StudentTeacherCheck" to="." method="_on_check_button_button_down"]
 [connection signal="pressed" from="ColorRect/LoginSwitchBTN" to="." method="_on_login_switch_btn_pressed"]
+[connection signal="button_down" from="ColorRect/SignupBTN" to="." method="_on_signup_btn_button_down"]
 [connection signal="button_down" from="ColorRect2/LoginBTN" to="." method="_on_login_btn_button_down"]
 [connection signal="pressed" from="ColorRect2/SignupSwitchBTN" to="." method="_on_signup_switch_btn_pressed"]
