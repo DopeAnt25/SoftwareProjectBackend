@@ -147,4 +147,6 @@ text = "LOGIN
 "
 
 [connection signal="button_down" from="ColorRect/StudentTeacherCheck" to="." method="_on_check_button_button_down"]
+[connection signal="pressed" from="ColorRect/LoginSwitchBTN" to="." method="_on_login_switch_btn_pressed"]
+[connection signal="button_down" from="ColorRect2/LoginBTN" to="." method="_on_login_btn_button_down"]
 [connection signal="pressed" from="ColorRect2/SignupSwitchBTN" to="." method="_on_signup_switch_btn_pressed"]
