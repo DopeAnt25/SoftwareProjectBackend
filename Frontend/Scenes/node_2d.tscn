@@ -26,7 +26,7 @@ offset_left = 32.0
 offset_top = 160.0
 offset_right = 519.0
 offset_bottom = 215.0
-placeholder_text = "Enter Password (Must contain ______) "
+placeholder_text = "Enter Password"
 
 [node name="password2" type="TextEdit" parent="ColorRect"]
 layout_mode = 0
@@ -96,13 +96,14 @@ offset_bottom = 576.0
 text = "Sign Up"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 offset_left = 280.0
 offset_top = 16.0
 offset_right = 830.0
 offset_bottom = 631.0
 color = Color(0.54902, 0.54902, 0.54902, 1)
 
-[node name="Username" type="TextEdit" parent="ColorRect2"]
+[node name="Email" type="TextEdit" parent="ColorRect2"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 160.0
