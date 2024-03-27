@@ -7,11 +7,11 @@ func _ready():
 	Firebase.Auth.signup_failed.connect(on_signup_failed)
 
 ##
-## Firestore connections
+## Firebase/Firestore connections
 ##
-func on_login_succeeded(auth):
+func on_login_succeeded(_auth):
 	$ColorRect/LoginScreen/LoginScreen/ErrorText.text = "Login Success!"
-	await get_tree().create_timer(3.0)
+	get_tree().change_scene_to_file("res://Scenes/gameManager.tscn")
 
 
 func on_login_failed(_error_code, message):
@@ -25,14 +25,24 @@ func on_signup_succeeded(auth):
 
 	if auth.localid:
 		var collection : FirestoreCollection = Firebase.Firestore.collection("users")
-		var task : FirestoreTask = collection.add(auth.localid, {
-			"email": email,
-			"name": name,
-			"isTeacher": isTeacher,
-			"classrooms": {}
-		})
+		if isTeacher:
+			var task : FirestoreTask = collection.add(auth.localid, {
+				"email": email,
+				"name": name,
+				"isTeacher": isTeacher,
+				"classrooms": {}
+			})
 		
-		await task.task_finished
+			await task.task_finished
+		else:
+			var task : FirestoreTask = collection.add(auth.localid, {
+				"email": email,
+				"name": name,
+				"isTeacher": isTeacher,
+				"classroom": null
+			})
+			
+			await task.task_finished
 		
 		get_tree().change_scene_to_file("res://Scenes/gameManager.tscn")
 

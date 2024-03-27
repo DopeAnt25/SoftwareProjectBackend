@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7cg1qhyysqpo"
-path="res://.godot/imported/yellow_sliderLeft.png-0030150e6b27ac416c752d60f33b6c22.ctex"
+uid="uid://b7ipv6knlf108"
+path="res://.godot/imported/precipitation-logo.jpg-b1b730e8600199fc3982f4b3e7d9f1b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://yellow_sliderLeft.png"
-dest_files=["res://.godot/imported/yellow_sliderLeft.png-0030150e6b27ac416c752d60f33b6c22.ctex"]
+source_file="res://assets/precipitation-logo.jpg"
+dest_files=["res://.godot/imported/precipitation-logo.jpg-b1b730e8600199fc3982f4b3e7d9f1b5.ctex"]
 
 [params]
 

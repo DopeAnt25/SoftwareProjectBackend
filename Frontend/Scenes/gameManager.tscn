@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq10b06s81k83"]
 
-[ext_resource type="Texture2D" uid="uid://dlviqx3f2dt3y" path="res://icon.svg" id="1_qgids"]
+[ext_resource type="Texture2D" uid="uid://dlviqx3f2dt3y" path="res://assets/icon.svg" id="1_qgids"]
 
 [sub_resource type="SystemFont" id="SystemFont_fxnm1"]
 
@@ -46,13 +46,13 @@ offset_right = 1056.0
 offset_bottom = 648.0
 
 [node name="ScoretextLabel" type="Label" parent="."]
-offset_left = 1064.0
-offset_right = 1164.0
+offset_left = 1048.0
+offset_right = 1166.0
 offset_bottom = 40.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_fxnm1")
 theme_override_font_sizes/font_size = 24
-text = "SCORE:"
+text = "SCORE: 0"
 
 [node name="ScoreNumberLabel" type="Label" parent="."]
 offset_left = 2112.0
@@ -61,4 +61,4 @@ offset_bottom = 40.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_fxnm1")
 theme_override_font_sizes/font_size = 27
-text = "SCORE:"
+text = "SCORE: 0"

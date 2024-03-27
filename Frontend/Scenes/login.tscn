@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccr2knmkbguk8"]
+[gd_scene load_steps=7 format=3 uid="uid://cxoopxpydf5qv"]
 
-[ext_resource type="Texture2D" uid="uid://dstps5fdwc7u4" path="res://blue_button13.png" id="1_3b7ki"]
+[ext_resource type="Texture2D" uid="uid://dstps5fdwc7u4" path="res://assets/blue_button13.png" id="1_3b7ki"]
 [ext_resource type="Script" path="res://Scenes/auth.gd" id="1_qakvv"]
-[ext_resource type="Texture2D" uid="uid://bwd2cv23mdn7" path="res://red_button.png" id="2_n8dqo"]
-[ext_resource type="Texture2D" uid="uid://dk5xcopaapcok" path="res://red_button_pressed.png" id="3_wrr4i"]
-[ext_resource type="Texture2D" uid="uid://c7cg1qhyysqpo" path="res://yellow_sliderLeft.png" id="5_rr177"]
+[ext_resource type="Texture2D" uid="uid://bwd2cv23mdn7" path="res://assets/red_button.png" id="2_n8dqo"]
+[ext_resource type="Texture2D" uid="uid://dk5xcopaapcok" path="res://assets/red_button_pressed.png" id="3_wrr4i"]
+[ext_resource type="Texture2D" uid="uid://c7cg1qhyysqpo" path="res://assets/yellow_sliderLeft.png" id="5_rr177"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3ifb"]
 texture = ExtResource("1_3b7ki")
@@ -71,6 +71,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_s3ifb")
 placeholder_text = "Email"
 alignment = 1
 virtual_keyboard_type = 5
+caret_blink = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/LoginScreen/LoginScreen"]
 layout_mode = 2
@@ -86,6 +87,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_s3ifb")
 placeholder_text = "Password"
 alignment = 1
 virtual_keyboard_type = 5
+caret_blink = true
 secret = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/LoginScreen/LoginScreen"]
