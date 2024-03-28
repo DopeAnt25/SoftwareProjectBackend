@@ -1,5 +1,7 @@
 extends Control
 
+
+
 func _ready():
 	Firebase.Auth.login_succeeded.connect(on_login_succeeded)
 	Firebase.Auth.login_failed.connect(on_login_failed)
@@ -11,7 +13,7 @@ func _ready():
 ##
 func on_login_succeeded(_auth):
 	$ColorRect/LoginScreen/LoginScreen/ErrorText.text = "Login Success!"
-	get_tree().change_scene_to_file("res://Scenes/gameManager.tscn")
+	get_tree().change_scene_to_file("res://Scenes/gameLauncher.tscn")
 
 
 func on_login_failed(_error_code, message):
@@ -32,8 +34,10 @@ func on_signup_succeeded(auth):
 				"isTeacher": isTeacher,
 				"classrooms": {}
 			})
-		
 			await task.task_finished
+			$ColorRect/SignUpScreen2.visible = false
+			$ColorRect/LoginScreen.visible = true
+			
 		else:
 			var task : FirestoreTask = collection.add(auth.localid, {
 				"email": email,
@@ -41,10 +45,9 @@ func on_signup_succeeded(auth):
 				"isTeacher": isTeacher,
 				"classroom": null
 			})
-			
 			await task.task_finished
-		
-		get_tree().change_scene_to_file("res://Scenes/gameManager.tscn")
+			$ColorRect/SignUpScreen2.visible = false
+			$ColorRect/LoginScreen.visible = true
 
 
 func on_signup_failed(_error_code, message):

@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Software"
+run/main_scene="res://Scenes/login.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
 [autoload]
 
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+GameData="*res://acidbase/Singletons/GameData.gd"
 
 [editor_plugins]
 
