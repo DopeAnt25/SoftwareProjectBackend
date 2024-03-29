@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxoopxpydf5qv"]
+[gd_scene load_steps=8 format=3 uid="uid://cxoopxpydf5qv"]
 
 [ext_resource type="Texture2D" uid="uid://dstps5fdwc7u4" path="res://assets/blue_button13.png" id="1_3b7ki"]
 [ext_resource type="Script" path="res://Scenes/auth.gd" id="1_qakvv"]
 [ext_resource type="Texture2D" uid="uid://bwd2cv23mdn7" path="res://assets/red_button.png" id="2_n8dqo"]
+[ext_resource type="Texture2D" uid="uid://dlviqx3f2dt3y" path="res://assets/icon.svg" id="2_nfffa"]
 [ext_resource type="Texture2D" uid="uid://dk5xcopaapcok" path="res://assets/red_button_pressed.png" id="3_wrr4i"]
 [ext_resource type="Texture2D" uid="uid://c7cg1qhyysqpo" path="res://assets/yellow_sliderLeft.png" id="5_rr177"]
 
@@ -25,44 +26,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.960784, 0.960784, 0.960784, 1)
+color = Color(0.156863, 0.156863, 0.156863, 1)
 
 [node name="LoginScreen" type="ColorRect" parent="ColorRect"]
-custom_minimum_size = Vector2(500, 250)
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -112.5
-offset_right = 225.0
-offset_bottom = 112.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.796078, 0.796078, 0.796078, 1)
+color = Color(0, 0.403922, 0.278431, 0)
 
-[node name="LoginScreen" type="VBoxContainer" parent="ColorRect/LoginScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -91.5
-offset_right = 225.0
-offset_bottom = 113.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Icon" type="Sprite2D" parent="ColorRect/LoginScreen"]
+position = Vector2(251, 15)
+scale = Vector2(0.882812, 0.882812)
+texture = ExtResource("2_nfffa")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/LoginScreen/LoginScreen"]
-layout_mode = 2
-
-[node name="EmailLine" type="LineEdit" parent="ColorRect/LoginScreen/LoginScreen/MarginContainer"]
+[node name="EmailLine" type="LineEdit" parent="ColorRect/LoginScreen"]
 custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -121.0
+offset_right = 200.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -73,12 +73,20 @@ alignment = 1
 virtual_keyboard_type = 5
 caret_blink = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/LoginScreen/LoginScreen"]
-layout_mode = 2
-
-[node name="PasswordLine" type="LineEdit" parent="ColorRect/LoginScreen/LoginScreen/MarginContainer2"]
+[node name="PasswordLine" type="LineEdit" parent="ColorRect/LoginScreen"]
 custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -35.0
+offset_right = 200.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -90,37 +98,63 @@ virtual_keyboard_type = 5
 caret_blink = true
 secret = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/LoginScreen/LoginScreen"]
-custom_minimum_size = Vector2(0, 70)
+[node name="ErrorText" type="Label" parent="ColorRect/LoginScreen"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="SignUpButton" type="TextureButton" parent="ColorRect/LoginScreen/LoginScreen/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture_normal = ExtResource("2_n8dqo")
-texture_pressed = ExtResource("3_wrr4i")
-
-[node name="Label" type="Label" parent="ColorRect/LoginScreen/LoginScreen/HBoxContainer/SignUpButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Sign Up"
+offset_left = 174.0
+offset_top = 291.0
+offset_right = 326.0
+offset_bottom = 314.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LoginButton" type="TextureButton" parent="ColorRect/LoginScreen/LoginScreen/HBoxContainer"]
+[node name="SignUpButton" type="TextureButton" parent="ColorRect/LoginScreen"]
 layout_mode = 2
+offset_left = 155.0
+offset_top = 457.0
+offset_right = 345.0
+offset_bottom = 506.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="ColorRect/LoginScreen/SignUpButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -11.5
+offset_right = 72.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "New User? Sign Up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoginButton" type="TextureButton" parent="ColorRect/LoginScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 96.5
+offset_right = 200.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 4
 texture_normal = ExtResource("2_n8dqo")
 texture_pressed = ExtResource("3_wrr4i")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/LoginScreen/LoginScreen/HBoxContainer/LoginButton"]
+[node name="Label" type="Label" parent="ColorRect/LoginScreen/LoginButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,12 +165,34 @@ text = "Login"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ErrorText" type="Label" parent="ColorRect/LoginScreen/LoginScreen"]
+[node name="ForgotPasswordButton" type="TextureButton" parent="ColorRect/LoginScreen"]
 layout_mode = 2
+offset_left = 284.0
+offset_top = 289.0
+offset_right = 433.0
+offset_bottom = 338.0
+size_flags_vertical = 4
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ColorRect/LoginScreen/ForgotPasswordButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 108.0
+offset_right = 17.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Forgot password?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SignUpScreen2" type="ColorRect" parent="ColorRect"]
 visible = false
-custom_minimum_size = Vector2(500, 350)
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -149,45 +205,31 @@ offset_right = 225.0
 offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.737255, 0.737255, 0.737255, 1)
+color = Color(0.737255, 0.737255, 0.737255, 0)
 
-[node name="SignUpScreen" type="VBoxContainer" parent="ColorRect/SignUpScreen2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -147.0
-offset_right = 225.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer4" type="MarginContainer" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="BackButton" type="TextureButton" parent="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer4"]
+[node name="BackButton" type="TextureButton" parent="ColorRect/SignUpScreen2"]
 custom_minimum_size = Vector2(20, 50)
 layout_mode = 2
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 83.0
+offset_bottom = 61.0
 size_flags_horizontal = 0
 size_flags_vertical = 4
 texture_normal = ExtResource("5_rr177")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer4/BackButton"]
+[node name="Label" type="Label" parent="ColorRect/SignUpScreen2/BackButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -11.5
-offset_right = 225.0
-offset_bottom = 11.5
+offset_left = -14.5
+offset_top = -12.5
+offset_right = 22.5
+offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -195,12 +237,13 @@ text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-layout_mode = 2
-
-[node name="NameLine" type="LineEdit" parent="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer"]
+[node name="NameLine" type="LineEdit" parent="ColorRect/SignUpScreen2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+offset_left = 25.0
+offset_top = 122.0
+offset_right = 475.0
+offset_bottom = 172.0
 theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -209,12 +252,13 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_s3ifb")
 placeholder_text = "Name"
 alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-layout_mode = 2
-
-[node name="EmailLine" type="LineEdit" parent="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer2"]
+[node name="EmailLine" type="LineEdit" parent="ColorRect/SignUpScreen2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+offset_left = 25.0
+offset_top = 188.0
+offset_right = 475.0
+offset_bottom = 238.0
 theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -224,12 +268,13 @@ placeholder_text = "Email"
 alignment = 1
 virtual_keyboard_type = 5
 
-[node name="MarginContainer3" type="MarginContainer" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-layout_mode = 2
-
-[node name="PasswordLine" type="LineEdit" parent="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer3"]
+[node name="PasswordLine" type="LineEdit" parent="ColorRect/SignUpScreen2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+offset_left = 25.0
+offset_top = 249.0
+offset_right = 475.0
+offset_bottom = 299.0
 theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -240,27 +285,35 @@ alignment = 1
 virtual_keyboard_type = 6
 secret = true
 
-[node name="isTeacher" type="CheckButton" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-layout_mode = 2
-size_flags_horizontal = 8
+[node name="isStudent" type="CheckBox" parent="ColorRect/SignUpScreen2"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 314.0
+offset_right = 473.0
+offset_bottom = 345.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "I am a teacher"
-alignment = 2
+text = "I am a student"
+icon_alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/SignUpScreen2/SignUpScreen"]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="SignUpPageSignUpButton" type="TextureButton" parent="ColorRect/SignUpScreen2/SignUpScreen/HBoxContainer"]
-layout_mode = 2
+[node name="SignUpPageSignUpButton" type="TextureButton" parent="ColorRect/SignUpScreen2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 155.5
+offset_right = 95.0
+offset_bottom = 204.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 texture_normal = ExtResource("2_n8dqo")
 texture_pressed = ExtResource("3_wrr4i")
 
-[node name="Label" type="Label" parent="ColorRect/SignUpScreen2/SignUpScreen/HBoxContainer/SignUpPageSignUpButton"]
+[node name="Label" type="Label" parent="ColorRect/SignUpScreen2/SignUpPageSignUpButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -271,10 +324,93 @@ text = "Sign Up"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ErrorText" type="Label" parent="ColorRect/SignUpScreen2/SignUpScreen"]
+[node name="ErrorText" type="Label" parent="ColorRect/SignUpScreen2"]
 layout_mode = 2
+offset_left = 25.0
+offset_top = 356.0
+offset_right = 475.0
+offset_bottom = 379.0
 
-[connection signal="pressed" from="ColorRect/LoginScreen/LoginScreen/HBoxContainer/SignUpButton" to="." method="_on_sign_up_button_pressed"]
-[connection signal="pressed" from="ColorRect/LoginScreen/LoginScreen/HBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
-[connection signal="pressed" from="ColorRect/SignUpScreen2/SignUpScreen/MarginContainer4/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="ColorRect/SignUpScreen2/SignUpScreen/HBoxContainer/SignUpPageSignUpButton" to="." method="_on_sign_up_page_sign_up_button_pressed"]
+[node name="ClassCodeScreen" type="ColorRect" parent="ColorRect"]
+visible = false
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -175.0
+offset_right = 225.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.737255, 0.737255, 0.737255, 0)
+
+[node name="ClassCode" type="LineEdit" parent="ColorRect/ClassCodeScreen"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -25.0
+offset_right = 200.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.305882, 0.74902, 0.866667, 1)
+theme_override_colors/font_placeholder_color = Color(0.305882, 0.74902, 0.866667, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_s3ifb")
+placeholder_text = "Classroom Code"
+alignment = 1
+virtual_keyboard_type = 6
+
+[node name="Label" type="Label" parent="ColorRect/ClassCodeScreen"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 169.0
+offset_right = 432.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 19
+text = "Please enter your teacher classroom code"
+
+[node name="SubmitClassCodeButton" type="TextureButton" parent="ColorRect/ClassCodeScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 67.5
+offset_right = 95.0
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("2_n8dqo")
+texture_pressed = ExtResource("3_wrr4i")
+
+[node name="Label" type="Label" parent="ColorRect/ClassCodeScreen/SubmitClassCodeButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sumbit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/LoginScreen/SignUpButton" to="." method="_on_sign_up_button_pressed"]
+[connection signal="pressed" from="ColorRect/LoginScreen/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="ColorRect/SignUpScreen2/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ColorRect/SignUpScreen2/SignUpPageSignUpButton" to="." method="_on_sign_up_page_sign_up_button_pressed"]
+[connection signal="pressed" from="ColorRect/ClassCodeScreen/SubmitClassCodeButton" to="." method="_on_submit_class_code_button_pressed"]
