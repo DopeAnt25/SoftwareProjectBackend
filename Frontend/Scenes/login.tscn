@@ -409,6 +409,12 @@ text = "Sumbit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ErrorText" type="Label" parent="ColorRect/ClassCodeScreen"]
+offset_left = 25.0
+offset_top = 286.0
+offset_right = 475.0
+offset_bottom = 309.0
+
 [connection signal="pressed" from="ColorRect/LoginScreen/SignUpButton" to="." method="_on_sign_up_button_pressed"]
 [connection signal="pressed" from="ColorRect/LoginScreen/LoginButton" to="." method="_on_login_button_pressed"]
 [connection signal="pressed" from="ColorRect/SignUpScreen2/BackButton" to="." method="_on_back_button_pressed"]

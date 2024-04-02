@@ -31,8 +31,18 @@ func on_signup_succeeded(auth):
 			"email": email,
 			"name": name,
 			"isStudent": isStudent,
-			"classroom": null
-			})
+			"classroom": null,
+			"scores": {
+				"acidsbases": {
+					"ab_progrss" : null
+				},
+				"pq": {
+					"pq_progress" : null
+				},
+				"redox": {
+					"r_progress" : null
+				}
+			}})
 			await task.task_finished
 			$ColorRect/SignUpScreen2.visible = false
 			$ColorRect/ClassCodeScreen.visible = true
@@ -84,12 +94,37 @@ func _on_back_button_pressed():
 
 func _on_submit_class_code_button_pressed():
 	var class_code = $ColorRect/ClassCodeScreen/ClassCode.text
-	var auth = Firebase.Auth.auth 
-	var doc_ref = Firebase.FirestoreTask.collection('users').document(auth.localid)
-	var update_data = {"classroom": class_code}
-	doc_ref.update(update_data)
+	var auth = Firebase.Auth.auth
 	
+	if auth.localid and await classroom_exists(class_code, auth.localid):
+		# adding classroom to student account
+		var collection : FirestoreCollection = Firebase.Firestore.collection('users')
+		var task : FirestoreTask = collection.update(auth.localid, {"classroom" : class_code})
+		await task.task_finished
+		print("ADDED CLASS TO STUDENTS ACCOUNT")
+		
+		# adding student to classroom
+		collection = Firebase.Firestore.collection('classrooms')
+		task = collection.get_doc(class_code)
+		await task.task_finished
+		
+		var student_array = task.document.doc_fields.students
+		student_array.append(auth.localid)
+		task = collection.update(class_code, {"students" : student_array})
+		await task.task_finished
+		
+		get_tree().change_scene_to_file("res://Scenes/gameLauncher.tscn")
+		
+	else:
+		$ColorRect/ClassCodeScreen/ErrorText.text = "ERROR: Classroom does not exists"
+
+
+func classroom_exists(classroom_code : String, user_id : String) -> bool:
+	var collection = Firebase.Firestore.collection('classrooms')
+	var task = collection.get_doc(classroom_code)
+	await task.task_finished
 	
-	
-	
-	
+	if not task.error:
+		return true
+	else:
+		return false
