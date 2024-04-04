@@ -34,13 +34,13 @@ func on_signup_succeeded(auth):
 			"classroom": null,
 			"scores": {
 				"acidsbases": {
-					"ab_progrss" : null
+					"ab_progress" : 0
 				},
 				"pq": {
-					"pq_progress" : null
+					"pq_progress" : 0
 				},
 				"redox": {
-					"r_progress" : null
+					"r_progress" : 0
 				}
 			}})
 			await task.task_finished

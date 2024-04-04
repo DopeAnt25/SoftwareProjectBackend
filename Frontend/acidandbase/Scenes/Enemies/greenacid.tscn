@@ -1,0 +1,157 @@
+[gd_scene load_steps=32 format=3 uid="uid://bsug5w7hssrt1"]
+
+[ext_resource type="Texture2D" uid="uid://b8djs76ddgue8" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_00.png" id="1_2rlvh"]
+[ext_resource type="Script" path="res://acidandbase/Scenes/Enemies/greenacid.gd" id="1_76ft1"]
+[ext_resource type="Texture2D" uid="uid://bditeccvyy36e" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_01.png" id="2_21obw"]
+[ext_resource type="Texture2D" uid="uid://chv3wtt3rh04u" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_00.png" id="2_dikel"]
+[ext_resource type="Texture2D" uid="uid://brxcewqabo8ow" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_02.png" id="3_1ih6s"]
+[ext_resource type="Texture2D" uid="uid://b1dis7l0b4kuo" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_01.png" id="3_rjmrt"]
+[ext_resource type="Texture2D" uid="uid://bex0y16ibrjl1" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_03.png" id="4_gg3ns"]
+[ext_resource type="Texture2D" uid="uid://de7ft32umgrke" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_02.png" id="4_ih0ym"]
+[ext_resource type="Texture2D" uid="uid://c8oww8blssoh4" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_04.png" id="5_mg0gp"]
+[ext_resource type="Texture2D" uid="uid://d1wkewr2r83ct" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_03.png" id="5_tewp4"]
+[ext_resource type="Texture2D" uid="uid://7cef8ltd5mxi" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_04.png" id="6_0xejt"]
+[ext_resource type="Texture2D" uid="uid://010ep8b073ho" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_05.png" id="6_jal7c"]
+[ext_resource type="Texture2D" uid="uid://e6o8ryqcc6ek" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_06.png" id="7_j4ruy"]
+[ext_resource type="Texture2D" uid="uid://cvjdfof15tyum" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_05.png" id="7_k5nw3"]
+[ext_resource type="Texture2D" uid="uid://de2f16kwbptfi" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_07.png" id="8_k7aj4"]
+[ext_resource type="Texture2D" uid="uid://es0ywt7wcr5h" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_08.png" id="9_7jvwe"]
+[ext_resource type="Texture2D" uid="uid://nxdjnyhhncvs" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_09.png" id="10_bygsp"]
+[ext_resource type="Texture2D" uid="uid://2a0fpsoe346p" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_10.png" id="11_tuare"]
+[ext_resource type="Texture2D" uid="uid://dp7y1gx13ox2r" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_11.png" id="12_f2rjs"]
+[ext_resource type="Texture2D" uid="uid://dpc84w8ti4c0d" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_12.png" id="13_na1da"]
+[ext_resource type="Texture2D" uid="uid://djfp71wl4qwln" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_13.png" id="14_bffec"]
+[ext_resource type="Texture2D" uid="uid://h0y8riymkfrh" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_14.png" id="15_j6exm"]
+[ext_resource type="Texture2D" uid="uid://tkdert53jql2" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_15.png" id="16_n3ddc"]
+[ext_resource type="Texture2D" uid="uid://cpw35ukav8b2h" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_16.png" id="17_g0edm"]
+[ext_resource type="Texture2D" uid="uid://ddpfy0aa2flys" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_17.png" id="18_l2y6j"]
+[ext_resource type="Texture2D" uid="uid://cpe4r11hbraxe" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_18.png" id="19_d0bwl"]
+[ext_resource type="Texture2D" uid="uid://bhhgybfsef3uj" path="res://acidandbase/Assets/Enemies/Monster01/Monster01-animation_19.png" id="20_fle34"]
+[ext_resource type="Texture2D" uid="uid://cmldv1tsqvkxh" path="res://acidandbase/Assets/UI/health bar/HPbar.jpg" id="22_lyrbd"]
+[ext_resource type="AudioStream" uid="uid://r625jeau6jwh" path="res://acidandbase/Assets/Audio/acid_death_noise.mp3" id="29_1udlm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1bpg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dikel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rjmrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ih0ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tewp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0xejt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k5nw3")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2rlvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_21obw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1ih6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gg3ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mg0gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jal7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j4ruy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k7aj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7jvwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bygsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tuare")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f2rjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_na1da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bffec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_j6exm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n3ddc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g0edm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l2y6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d0bwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fle34")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3xk5y"]
+radius = 29.0172
+
+[node name="GreenAcid" type="PathFollow2D"]
+loop = false
+script = ExtResource("1_76ft1")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.538462, 0.538462)
+sprite_frames = SubResource("SpriteFrames_a1bpg")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_3xk5y")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -25.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("22_lyrbd")
+texture_progress = ExtResource("22_lyrbd")
+tint_under = Color(0.25098, 0.25098, 0.25098, 1)
+tint_progress = Color(0, 0.760784, 0.0117647, 1)
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_1udlm")
+volume_db = 4.685
+bus = &"SFX"

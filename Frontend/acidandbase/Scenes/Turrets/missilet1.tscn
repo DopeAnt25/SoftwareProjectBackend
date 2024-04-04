@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dye0fcins30ov"]
+
+[ext_resource type="Script" path="res://acidandbase/Scenes/Turrets/missilet1.gd" id="1_0jrdp"]
+[ext_resource type="Texture2D" uid="uid://sqrh2k21xgjh" path="res://acidandbase/Assets/Towers/big_blaster.png" id="2_clu6g"]
+[ext_resource type="AudioStream" uid="uid://w3mpvldel6xq" path="res://acidandbase/Assets/Audio/turret_shoot.ogg" id="3_ppje8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hybw3"]
+radius = 20.0
+
+[node name="missilet1" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_0jrdp")
+
+[node name="Turret" type="Sprite2D" parent="."]
+scale = Vector2(0.863636, 0.863636)
+texture = ExtResource("2_clu6g")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_hybw3")
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ppje8")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://x65lqjg23upm"]
+
+[ext_resource type="Script" path="res://acidandbase/Scenes/Turrets/doubleshootert1.gd" id="1_mrh0t"]
+[ext_resource type="Texture2D" uid="uid://dgw0o2b8wu3v0" path="res://acidandbase/Assets/Towers/double_shooter.png" id="2_02gfb"]
+[ext_resource type="Texture2D" uid="uid://bdcctt7pvy03e" path="res://acidandbase/Assets/Towers/effects/Shoot fx-animation_00.png" id="3_bv6mg"]
+[ext_resource type="AudioStream" uid="uid://w3mpvldel6xq" path="res://acidandbase/Assets/Audio/turret_shoot.ogg" id="4_cst3o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkg4m"]
+radius = 20.0
+
+[sub_resource type="Animation" id="Animation_kuec7"]
+resource_name = "Fire"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Turret/Muzzle/anims1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Turret/Muzzle/anims2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ch7e"]
+_data = {
+"Fire": SubResource("Animation_kuec7")
+}
+
+[node name="Doubleshootert1" type="Node2D"]
+script = ExtResource("1_mrh0t")
+
+[node name="Turret" type="Sprite2D" parent="."]
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("2_02gfb")
+
+[node name="Muzzle" type="Marker2D" parent="Turret"]
+
+[node name="anims1" type="Sprite2D" parent="Turret/Muzzle"]
+visible = false
+position = Vector2(27.4286, -128)
+texture = ExtResource("3_bv6mg")
+
+[node name="anims2" type="Sprite2D" parent="Turret/Muzzle"]
+position = Vector2(-23.7714, -128)
+texture = ExtResource("3_bv6mg")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_lkg4m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4ch7e")
+}
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cst3o")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

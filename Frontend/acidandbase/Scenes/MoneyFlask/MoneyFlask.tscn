@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyjs6i7timnki"]
+
+[ext_resource type="Texture2D" uid="uid://cah8sfjoye8y" path="res://acidandbase/Assets/Environment/Icon11_09.png" id="1_3icyw"]
+[ext_resource type="Script" path="res://acidandbase/Scenes/MoneyFlask/MoneyFlask.gd" id="1_7p7qt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soqjk"]
+radius = 37.0135
+
+[node name="MoneyFlask" type="Node2D"]
+script = ExtResource("1_7p7qt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.57813, 1.57813)
+texture = ExtResource("1_3icyw")
+
+[node name="ClickableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableArea"]
+shape = SubResource("CircleShape2D_soqjk")
+
+[connection signal="input_event" from="ClickableArea" to="." method="_on_clickable_area_input_event"]

@@ -16,7 +16,7 @@ func _on_precipitation_game_section_pressed():
 
 func _on_acid_and_base_game_section_pressed():
 	## enter acidandbase team game file path
-	pass
+	get_tree().change_scene_to_file("res://acidandbase/Scene_Handler.tscn")
 
 
 func get_user_setting_data():

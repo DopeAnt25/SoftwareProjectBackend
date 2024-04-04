@@ -1,0 +1,152 @@
+[gd_scene load_steps=31 format=3 uid="uid://cwftwrxq8dr5a"]
+
+[ext_resource type="Script" path="res://acidandbase/Scenes/Enemies/blueacid.gd" id="1_rd2le"]
+[ext_resource type="Texture2D" uid="uid://chv3wtt3rh04u" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_00.png" id="2_y275r"]
+[ext_resource type="Texture2D" uid="uid://b1dis7l0b4kuo" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_01.png" id="3_6kp2l"]
+[ext_resource type="Texture2D" uid="uid://de7ft32umgrke" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_02.png" id="4_7gxhl"]
+[ext_resource type="Texture2D" uid="uid://d1wkewr2r83ct" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_03.png" id="5_tbu0l"]
+[ext_resource type="Texture2D" uid="uid://7cef8ltd5mxi" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_04.png" id="6_47wot"]
+[ext_resource type="Texture2D" uid="uid://cvjdfof15tyum" path="res://acidandbase/Assets/Enemies/death/EnemyDieFx-EnemyDieFx_05.png" id="7_wvj65"]
+[ext_resource type="Texture2D" uid="uid://bsvdp65qqjh3m" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_00.png" id="8_ffu0v"]
+[ext_resource type="Texture2D" uid="uid://qoxvk58uup88" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_01.png" id="9_uii50"]
+[ext_resource type="Texture2D" uid="uid://b1b562pqy27ca" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_02.png" id="10_g2bwf"]
+[ext_resource type="Texture2D" uid="uid://biw3s7djnop4m" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_03.png" id="11_ihyo7"]
+[ext_resource type="Texture2D" uid="uid://ckrh4tluprl3x" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_04.png" id="12_qeoi7"]
+[ext_resource type="Texture2D" uid="uid://o6we8mt6yrfh" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_05.png" id="13_s7x14"]
+[ext_resource type="Texture2D" uid="uid://k117hunluihn" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_06.png" id="14_stit6"]
+[ext_resource type="Texture2D" uid="uid://cxbr1gyh6ivid" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_07.png" id="15_mfhhm"]
+[ext_resource type="Texture2D" uid="uid://l3kupdm18q45" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_08.png" id="16_adqhv"]
+[ext_resource type="Texture2D" uid="uid://6fx5fd3xlf3y" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_09.png" id="17_h20h0"]
+[ext_resource type="Texture2D" uid="uid://cpdtos5lakso" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_10.png" id="18_y38xr"]
+[ext_resource type="Texture2D" uid="uid://btwje2k7ao014" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_11.png" id="19_ri62c"]
+[ext_resource type="Texture2D" uid="uid://di8ev1ifl4meg" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_12.png" id="20_nw4qt"]
+[ext_resource type="Texture2D" uid="uid://dr7vtr7onbxu1" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_13.png" id="21_rvwy0"]
+[ext_resource type="Texture2D" uid="uid://xqiufbsypxdx" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_14.png" id="22_o32w4"]
+[ext_resource type="Texture2D" uid="uid://waaqx2o7l4m4" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_15.png" id="23_1cfbk"]
+[ext_resource type="Texture2D" uid="uid://dlboc51vydv15" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_16.png" id="24_5eedv"]
+[ext_resource type="Texture2D" uid="uid://blupgql42t7t1" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_17.png" id="25_lcc5r"]
+[ext_resource type="Texture2D" uid="uid://cdt4rlrkldkgc" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_18.png" id="26_0aq1h"]
+[ext_resource type="Texture2D" uid="uid://qmxwj5l1dj8n" path="res://acidandbase/Assets/Enemies/Monster03/Monster03-animation_19.png" id="27_irs8v"]
+[ext_resource type="Texture2D" uid="uid://cmldv1tsqvkxh" path="res://acidandbase/Assets/UI/health bar/HPbar.jpg" id="28_as0ym"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1bpg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y275r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6kp2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7gxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tbu0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_47wot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wvj65")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ffu0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uii50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g2bwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ihyo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qeoi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s7x14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_stit6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mfhhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_adqhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_h20h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_y38xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ri62c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nw4qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rvwy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_o32w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1cfbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5eedv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lcc5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0aq1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_irs8v")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3xk5y"]
+radius = 29.0172
+
+[node name="BlueAcid" type="PathFollow2D"]
+loop = false
+script = ExtResource("1_rd2le")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.538462, 0.538462)
+sprite_frames = SubResource("SpriteFrames_a1bpg")
+animation = &"walk"
+frame_progress = 0.764937
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_3xk5y")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -25.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("28_as0ym")
+texture_progress = ExtResource("28_as0ym")
+tint_under = Color(0.25098, 0.25098, 0.25098, 1)
+tint_progress = Color(0, 0.760784, 0.0117647, 1)
